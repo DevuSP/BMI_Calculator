@@ -54,7 +54,10 @@ body {
 }
 
 input {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
     border: 1px solid rgb(121, 52, 171);
+    font-weight: 700;
+    font-size: 20px;
     width: 100px;
     margin: 3px;
     height: 25px;
@@ -161,6 +164,7 @@ footer {
 
     input {
         width: 82px;
+        font-size: 17px;
     }
 
     .bmi-chart {
