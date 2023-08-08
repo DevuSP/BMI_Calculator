@@ -67,14 +67,17 @@ input {
 }
 
 h4 {
-    margin: 10px 0 0 0;
+    margin: 10px 0 15px 0;
 }
 
 h3 {
+    margin: 25px 0;
     text-decoration: underline;
+    font-size: 43px;
 }
 
 .input-bmi,
+.bmi-chart li,
 p {
     font-size: 25px;
 }
@@ -84,10 +87,10 @@ button {
     border-radius: 10%;
     border: 0;
     color: aliceblue;
-    font-size: medium;
-    height: 31px;
+    font-size: 20px;
+    height: 35px;
     cursor: pointer;
-    width: 80px;
+    width: 120px;
     margin-top: 7px;
     box-shadow: 2px 2px black;
 
