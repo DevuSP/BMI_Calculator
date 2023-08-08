@@ -1,0 +1,175 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    background-color: rgb(132, 66, 180);
+}
+
+.header h1 {
+    font-size: 40px;
+    color: aliceblue;
+    margin-left: 40px;
+}
+
+.main {
+    flex: 1;
+    font-weight: 700;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.main h1 {
+    text-decoration: underline;
+}
+
+.main-body {
+    border: 2px solid rebeccapurple;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#highlight {
+    padding: 1.5px 0 3px 0;
+    color: aliceblue;
+    background-color: rgb(121, 52, 171);
+}
+
+.input-bmi {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin-left: 10px;
+}
+
+input {
+    border: 1px solid rgb(121, 52, 171);
+    width: 100px;
+    margin: 3px;
+    height: 25px;
+    box-shadow: 2px 2px black;
+}
+
+h4 {
+    margin: 10px 0 0 0;
+}
+
+h3 {
+   text-decoration: underline;
+}
+
+.input-bmi,
+.bmi-chart,
+p {
+    font-size: 25px;
+}
+
+button {
+    background-color: rgb(132, 66, 180);
+    border-radius: 10%;
+    border: 0;
+    color: aliceblue;
+    font-size: medium;
+    height: 31px;
+    cursor: pointer;
+    width: 80px;
+    margin-top: 7px;
+    box-shadow: 2px 2px black;
+
+}
+
+li {
+    margin: 7px 0;
+}
+
+.span-red {
+    color: red;
+}
+
+footer {
+    font-size: x-large;
+    color: aliceblue;
+    background-color: rgb(132, 66, 180);
+    padding: 20px;
+    text-align: center;
+}
+
+@media only screen and (max-width:860px) {
+
+    .container {
+        min-height: 100vh;
+    }
+
+    .main {
+        max-width: 500px;
+    }
+
+    .header h1 {
+        font-size: 37px;
+    }
+
+    .main h1 {
+        font-size: 32px;
+    }
+
+    .input-bmi,
+    .bmi-chart,
+    p {
+        font-size: 22px;
+    }
+
+    button {
+        height: 28px;
+        width: 50px;
+        margin-top: 7px;
+    }
+
+}
+
+@media only screen and (max-width:700px) {
+    .main {
+        flex: 1;
+        font-weight: 700;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+
+    .header h1 {
+        font-size: 27px;
+    }
+
+    .main h1 {
+        font-size: 25px;
+    }
+
+    .input-bmi,
+    p {
+        font-size: 19px;
+        width: auto;
+    }
+
+    input {
+        width: 82px;
+    }
+
+    .bmi-chart {
+        font-size: 15px;
+    }
+
+    button {
+        height: 28px;
+        width: 80px;
+        margin-top: 7px;
+    }
+}

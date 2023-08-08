@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1> THE PARMAR'S </h1>
+        </div>
+        <div class="main">
+            <h1>Body Mass Index(BMI)</h1>
+            <p>
+                Body mass index (BMI) is a value derived from the mass (weight) and height of a person. The BMI is
+                defined as
+                the body mass divided by the square of the body height, and is expressed in units of kg/m2, resulting
+                from mass
+                in kilograms and height in metres.
+            </p>
+            <p>
+                A high BMI can indicate high body fatness. <span id="highlight">BMI screens for weight categories that
+                    may lead to health problems, but it does not diagnose the body fatness or health of an
+                    individual.</span>
+            </p>
+            <p>
+                The BMI may be determined using a table or chart which displays BMI as a function of mass and height
+                using
+                contour lines or colours for different BMI categories, and which may use other units of measurement
+                (converted
+                to metric units for the calculation).
+            </p>
+            <div class="main-body">
+
+                <div class="input-bmi">
+                    <label for="weight">Weight: <input type="number" name="weight" id="weight"
+                            placeholder="In Kilogram"></label>
+                    <label for="weight">Height: <input type="number" name="height" id="height"
+                            placeholder="In Meter"></label>
+                    <button onclick=calculateBmi()>Calculate</button>
+                    <h4 id="result">Your BMI will be shown here.</h4>
+                </div>
+
+                <div class="bmi-chart">
+
+                    <ul>
+                        <h3>BMI Chart</h3>
+                        <li>BMI less than 18 :<span class="span"> Underweight</span></li>
+                        <li>18 to 24 :<span class="span"> Normal</span></li>
+                        <li>25 to 29 :<span class="span"></span> Overweight</span></li>
+                        <li>30 or more:<span class="span-red"> Obese</span></li>
+                    </ul>
+
+                </div>
+
+            </div>
+        </div>
+        <footer>
+            <p>&copy;For fitness, by The Parmar's</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
