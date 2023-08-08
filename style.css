@@ -1,8 +1,12 @@
+*{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-weight: 600;
+}
+
 body {
     margin: 0;
     padding: 0;
     font-family: 'Yanone Kaffeesatz', sans-serif;
-
 }
 
 .container {
@@ -113,10 +117,11 @@ footer {
     text-align: center;
 }
 
-@media only screen and (max-width:920px) {
+@media only screen and (max-width:1000px) {
 
     .main {
         max-width: 700px;
+        padding: 0 30px;
     }
 
     .header h1 {
@@ -135,35 +140,37 @@ footer {
 
     .input-bmi {
         max-width: fit-content;
-        font-size: 60px;
+        font-size: 40px;
     }
 
     h4 {
         font-size: 50px;
+        color: rgb(132, 66, 180);
     }
 
     h3 {
+        font-size: 50px;
         margin: 10px 0 20px 0;
     }
 
     input {
-        font-size: 50px;
+        font-size: 35px;
         width: 300px;
         margin: 3px;
         height: 60px;
     }
 
-    .bmi-chart,
+    .bmi-chart li,
     p {
-        font-size: 50px;
+        font-size: 40px;
     }
 
     button {
-        height: 70px;
-        width: 300px;
+        height: 60px;
+        width: 250px;
         border-radius: 5%;
         margin-top: 7px;
-        font-size: 45px;
+        font-size: 35px;
     }
 
     footer p {
@@ -183,7 +190,7 @@ footer {
     }
 
     .header h1 {
-        margin-left: 7px;
+        margin-left: 10px;
         font-size: 40px;
     }
 
@@ -226,7 +233,7 @@ footer {
         height: 40px;
         width: 120px;
         margin-top: 7px;
-        font-size: 20px;
+        font-size: 25px;
     }
 
     footer p {
