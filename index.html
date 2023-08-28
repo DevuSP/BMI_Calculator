@@ -41,32 +41,35 @@
             <div class="main-body">
                 <div class="input-bmi">
                     <div class="grid-cell" id="cell-1">
-                    <p class="large-font">Calculate your BMI.</p>
+                        <p class="large-font">Calculate your BMI.</p>
                     </div>
-                    <div class="grid-cell">
-                        <label>Weight: <input type="number" name="weight" id="weight"
-                                placeholder="In Kilogram"> kg</label>
+                    <div class="grid-cell grid-input">
+                        <div class="grid-cell-with-input">
+                            <label>Weight: </label>
+                        </div>
+                        <div class="grid-cell-with-input">
+                            <input type="number" name="weight" id="weight" placeholder="In kg">
+                        </div>
+                        <div class="grid-cell-with-input">
+                            <label>Height: </label>
+                        </div>
+                        <div class="grid-cell-with-input">
+                            <input type="number" name="height" id="height" placeholder="In cm">
+                        </div>
+
                     </div>
-                    <div class="grid-cell">
-                        <label>Height: <input type="number" name="height" id="height"
-                                placeholder="In Centimeter"> cm</label>
-                    </div>
-                    <div class="grid-cell">
-                        <button onclick=calculateBmi()>Calculate</button>
-                    </div>
-                    <div class="grid-cell">
-                        <p class="medium-font" id="result">Your BMI will be shown here.</p>
-                    </div>
+                    <button onclick=calculateBmi()>Calculate</button>
+                    <p class="medium-font" id="result">Your BMI will be shown here.</p>
                 </div>
 
                 <div class="bmi-chart">
 
                     <ul>
                         <p class="large-font" id="bmi-chart-heading">BMI Chart</p>
-                            <li>BMI less than 18 :<span class="span"> Underweight</span></li>
-                            <li>18 to 24 :<span class="span"> Normal</span></li>
-                            <li>25 to 29 :<span class="span"></span> Overweight</span></li>
-                            <li>30 or more:<span class="span-red"> Obese</span></li>
+                        <li>BMI less than 18 :<span class="span"> Underweight</span></li>
+                        <li>18 to 24 :<span class="span"> Normal</span></li>
+                        <li>25 to 29 :<span class="span"></span> Overweight</span></li>
+                        <li>30 or more:<span class="span-red"> Obese</span></li>
                     </ul>
 
                 </div>

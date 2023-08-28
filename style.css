@@ -1,10 +1,12 @@
-*{
+* {
     font-family: 'Yanone Kaffeesatz', sans-serif;
     font-weight: 600;
     --violet-color: rgb(132, 66, 180);
     --light-violet-color: rgb(159, 102, 199);
 }
-ul{
+
+ul,
+input {
     margin: 0;
     padding: 0;
 }
@@ -48,7 +50,7 @@ body {
 
 .header {
     background-color: var(--violet-color);
-    margin-bottom: 30px;    
+    margin-bottom: 30px;
 }
 
 .header h1 {
@@ -76,32 +78,42 @@ p.large-font {
     margin-bottom: 20px;
 }
 
-#highlight {
-    padding: 1.5px 0 3px 0;
-    color: aliceblue;
-    background-color: rgb(121, 52, 171);
-}
-
 .input-bmi {
     display: grid;
     max-width: 300px;
 }
 
-.grid-cell{
-    padding: 5px;
+.grid-input {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 1fr;
+    max-width: 234px;
+    padding: 10px 0;
+    gap: 10px;
+}
+
+.grid-cell-with-input {
+    display: flex;
+    align-items: end;
 }
 
 input {
-    width: 100px;
-    height: 25px;
+    width: 90%;
+    height: 30px;
     font-size: 20px;
     font-weight: 700;
-    box-shadow: 2px 2px black;
-    border: 1px solid rgb(121, 52, 171);
+    border: 0;
+    border-bottom: 2px solid var(--violet-color);
     font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 
-.medium-font{
+input:focus {
+    border: 0;
+    outline: 2px solid var(--violet-color);
+    box-shadow: 4px 3px 2px black;
+}
+
+.medium-font {
     font-size: 30px;
     margin: 5px 0 10px 0;
 }
@@ -112,9 +124,14 @@ p {
     font-size: 25px;
 }
 
+label {
+    margin-left: 15px;
+}
+
 button {
     width: 100px;
     height: 35px;
+    margin: 0 0 0 15px;
     border-radius: 6px;
     border: 0;
     color: aliceblue;
@@ -124,7 +141,7 @@ button {
     background-color: rgb(132, 66, 180);
 }
 
-#bmi-chart-heading{
+#bmi-chart-heading {
     padding: 5px 0;
 }
 
@@ -143,6 +160,12 @@ footer {
     background-color: rgb(132, 66, 180);
     padding: 20px;
     text-align: center;
+}
+
+#highlight {
+    padding: 1.5px 0 3px 0;
+    color: aliceblue;
+    background-color: rgb(121, 52, 171);
 }
 
 @media only screen and (max-width:1000px) {
@@ -167,25 +190,28 @@ footer {
         font-size: 40px;
     }
 
+    .grid-input {
+        max-width: 300px;
+    }
+
     .input-bmi {
         max-width: fit-content;
         font-size: 30px;
     }
 
-    .large-font {
+    p.large-font {
         font-size: 40px;
     }
 
-    .medium-font {
+    p.medium-font {
         font-size: 35px;
         margin: 10px 0 20px 0;
     }
 
     input {
-        font-size: 30px;
-        width: 250px;
+        width: 60%;
+        font-size: 25px;
         margin: 3px;
-        height: 50px;
     }
 
     li,
@@ -202,7 +228,7 @@ footer {
         font-size: 30px;
     }
 
-    
+
 
 }
 
@@ -216,47 +242,58 @@ footer {
         margin-bottom: 10px;
     }
 
-    .header > .large-font {
-        margin-left: 10px;
+    .header h1 {
         font-size: 40px;
     }
 
-    .medium-font {
-        font-size: 30px;
+    .header>.large-font {
+        margin-left: 10px;
     }
 
-    .large-font {
-        font-size: 30px;
+    p.medium-font {
+        font-size: 25px;
     }
 
-    .input-bmi {
+    p.large-font {
         font-size: 27px;
     }
 
-    .bmi-chart li{
+    .grid-input {
+        max-width: 180px;
+    }
+
+    .input-bmi {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        font-size: 27px;
+    }
+
+    .bmi-chart li {
         font-size: 27px;
     }
 
     li,
     label,
     p {
-        font-size: 25px;
+        font-size: 20px;
     }
 
     input {
-        width: 130px;
-        height: 32px;
-        font-size: 25px;
+        width: 90%;
+        font-size: 20px;
+        height: 24px;
     }
 
     button {
-        height: 40px;
-        width: 120px;
-        margin-top: 7px;
-        font-size: 25px;
+        margin: 0;
+        height: 33px;
+        width: 78px;
+        font-size: 20px;
     }
 
-    #bmi-chart-heading{
+    #bmi-chart-heading {
         text-align: center;
     }
 }
