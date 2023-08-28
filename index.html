@@ -18,7 +18,7 @@
             <h1> THE PARMAR'S </h1>
         </div>
         <div class="main">
-            <h1>Body Mass Index(BMI)</h1>
+            <p class="large-font">Body Mass Index(BMI)</p>
             <p>
                 Body mass index (BMI) is a value derived from the mass (weight) and height of a person. The BMI is
                 defined as
@@ -39,25 +39,34 @@
                 to metric units for the calculation).
             </p>
             <div class="main-body">
-
                 <div class="input-bmi">
-                    <h3>Calculate your BMI.</h3>
-                    <label for="weight">Weight: <input type="number" name="weight" id="weight"
-                            placeholder="In Kilogram"> kg</label>
-                    <label for="weight">Height: <input type="number" name="height" id="height"
-                            placeholder="In Centimeter"> cm</label>
-                    <button onclick=calculateBmi()>Calculate</button>
-                    <h4 id="result">Your BMI will be shown here.</h4>
+                    <div class="grid-cell" id="cell-1">
+                    <p class="large-font">Calculate your BMI.</p>
+                    </div>
+                    <div class="grid-cell">
+                        <label>Weight: <input type="number" name="weight" id="weight"
+                                placeholder="In Kilogram"> kg</label>
+                    </div>
+                    <div class="grid-cell">
+                        <label>Height: <input type="number" name="height" id="height"
+                                placeholder="In Centimeter"> cm</label>
+                    </div>
+                    <div class="grid-cell">
+                        <button onclick=calculateBmi()>Calculate</button>
+                    </div>
+                    <div class="grid-cell">
+                        <p class="medium-font" id="result">Your BMI will be shown here.</p>
+                    </div>
                 </div>
 
                 <div class="bmi-chart">
 
                     <ul>
-                        <h3>BMI Chart</h3>
-                        <li>BMI less than 18 :<span class="span"> Underweight</span></li>
-                        <li>18 to 24 :<span class="span"> Normal</span></li>
-                        <li>25 to 29 :<span class="span"></span> Overweight</span></li>
-                        <li>30 or more:<span class="span-red"> Obese</span></li>
+                        <p class="large-font" id="bmi-chart-heading">BMI Chart</p>
+                            <li>BMI less than 18 :<span class="span"> Underweight</span></li>
+                            <li>18 to 24 :<span class="span"> Normal</span></li>
+                            <li>25 to 29 :<span class="span"></span> Overweight</span></li>
+                            <li>30 or more:<span class="span-red"> Obese</span></li>
                     </ul>
 
                 </div>

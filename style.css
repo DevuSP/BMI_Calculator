@@ -1,6 +1,12 @@
 *{
     font-family: 'Yanone Kaffeesatz', sans-serif;
     font-weight: 600;
+    --violet-color: rgb(132, 66, 180);
+    --light-violet-color: rgb(159, 102, 199);
+}
+ul{
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -9,6 +15,31 @@ body {
     font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 
+/* Scrollbar Starts Here. It does not work in firefox or edge in prior version 79. */
+
+/* width */
+::-webkit-scrollbar {
+    width: 14px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgb(227, 203, 240);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--light-violet-color);
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--light-violet-color);
+}
+
+/* Scrollbar Ends Here */
+
 .container {
     display: flex;
     flex-direction: column;
@@ -16,12 +47,11 @@ body {
 }
 
 .header {
-    background-color: rgb(132, 66, 180);
-    margin-bottom: 30px;
+    background-color: var(--violet-color);
+    margin-bottom: 30px;    
 }
 
 .header h1 {
-    font-size: 40px;
     color: aliceblue;
     margin-left: 40px;
 }
@@ -33,16 +63,16 @@ body {
     margin: 0 auto;
 }
 
-.main h1 {
+p.large-font {
     text-decoration: underline;
     font-size: 45px;
+    margin: 10px 0 0 0;
 }
 
 .main-body {
     border: 2px solid rebeccapurple;
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
     margin-bottom: 20px;
 }
 
@@ -53,56 +83,54 @@ body {
 }
 
 .input-bmi {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     max-width: 300px;
-    margin-left: 10px;
+}
+
+.grid-cell{
+    padding: 5px;
 }
 
 input {
-    font-family: 'Yanone Kaffeesatz', sans-serif;
-    border: 1px solid rgb(121, 52, 171);
-    font-weight: 700;
-    font-size: 20px;
     width: 100px;
-    margin: 3px;
     height: 25px;
+    font-size: 20px;
+    font-weight: 700;
     box-shadow: 2px 2px black;
+    border: 1px solid rgb(121, 52, 171);
+    font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 
-h4 {
-    margin: 10px 0 15px 0;
+.medium-font{
+    font-size: 30px;
+    margin: 5px 0 10px 0;
 }
 
-h3 {
-    margin: 25px 0;
-    text-decoration: underline;
-    font-size: 43px;
-}
-
-.input-bmi,
-.bmi-chart li,
+li,
+label,
 p {
     font-size: 25px;
 }
 
 button {
-    background-color: rgb(132, 66, 180);
-    border-radius: 10%;
+    width: 100px;
+    height: 35px;
+    border-radius: 6px;
     border: 0;
     color: aliceblue;
-    font-size: 20px;
-    height: 35px;
+    font-size: 25px;
     cursor: pointer;
-    width: 120px;
-    margin-top: 7px;
     box-shadow: 2px 2px black;
+    background-color: rgb(132, 66, 180);
+}
 
+#bmi-chart-heading{
+    padding: 5px 0;
 }
 
 li {
     margin: 7px 0;
-    /* list-style-position: inside; */
+    list-style-position: inside;
 }
 
 .span-red {
@@ -131,11 +159,12 @@ footer {
     .main-body {
         display: flex;
         flex-direction: column;
+        align-items: center;
         margin-bottom: 20px;
     }
 
     .main h1 {
-        font-size: 50px;
+        font-size: 40px;
     }
 
     .input-bmi {
@@ -143,13 +172,12 @@ footer {
         font-size: 30px;
     }
 
-    h4 {
+    .large-font {
         font-size: 40px;
-        color: rgb(132, 66, 180);
     }
 
-    h3 {
-        font-size: 40px;
+    .medium-font {
+        font-size: 35px;
         margin: 10px 0 20px 0;
     }
 
@@ -160,26 +188,25 @@ footer {
         height: 50px;
     }
 
-    .bmi-chart li,
+    li,
+    label,
     p {
         font-size: 30px;
     }
 
     button {
-        height: 55px;
-        width: 200px;
+        height: 45px;
+        width: 110px;
         border-radius: 5%;
         margin-top: 7px;
-        font-size: 35px;
+        font-size: 30px;
     }
 
-    footer p {
-        font-size: 25px;
-    }
+    
 
 }
 
-@media only screen and (max-width:500px) {
+@media only screen and (max-width:580px) {
     .main {
         max-width: 350px;
         padding: 0 30px;
@@ -189,25 +216,20 @@ footer {
         margin-bottom: 10px;
     }
 
-    .header h1 {
+    .header > .large-font {
         margin-left: 10px;
         font-size: 40px;
     }
 
-    .main h1 {
-        font-size:35px;
-    }
-
-    h3 {
+    .medium-font {
         font-size: 30px;
     }
 
-    h4 {
+    .large-font {
         font-size: 30px;
     }
 
     .input-bmi {
-        max-width: fit-content;
         font-size: 27px;
     }
 
@@ -215,6 +237,8 @@ footer {
         font-size: 27px;
     }
 
+    li,
+    label,
     p {
         font-size: 25px;
     }
@@ -225,10 +249,6 @@ footer {
         font-size: 25px;
     }
 
-    .bmi-chart {
-        font-size: 24px;
-    }
-
     button {
         height: 40px;
         width: 120px;
@@ -236,7 +256,7 @@ footer {
         font-size: 25px;
     }
 
-    footer p {
-        font-size: 20px;
+    #bmi-chart-heading{
+        text-align: center;
     }
 }
